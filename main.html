@@ -1,0 +1,44 @@
+<html>
+	<head>
+	<title>HTML Coding</title>
+	<script>
+		function refresh() {
+			var textContent = document.getElementById('editor-textarea').value;
+			document.getElementById('viewer').srcdoc = textContent;
+		}
+	</script>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.main{
+			background: #1abc9c;
+			width: 100%;
+			height: 100%;
+			display: inline-flex;
+		}
+		#editor-textarea{
+			width: 100%;
+			height: 97%;
+			margin: 10px;
+			padding: 5px;
+		}
+		#viewer{
+			background: white;
+			border: none;
+			width: 100%;
+			height: 97%;
+			margin: 10px;
+			border: 1px solid #3498db;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="main">
+			<textarea id="editor-textarea" onkeyup="refresh()" placeholder="Your code goes here!"></textarea>
+			<iframe id="viewer"></iframe>
+			
+		</div>
+	</body>
+</html>
